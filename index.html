@@ -6,12 +6,11 @@
   <a-scene renderer="logarithmicDepthBuffer: true; colorManagement: true; sortObjects: true;" embedded arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
     
     <a-assets> 
-      <a-asset-item id="BonecoOBJ" src="https://raw.githubusercontent.com/nucleosistemasit/ar_randon_teste/main/3d/randon.obj"></a-asset-item>
-      <a-asset-item id="BonecoMTL" src="https://raw.githubusercontent.com/nucleosistemasit/ar_randon_teste/main/3d/randon.mtl"></a-asset-item>
+      <a-asset-item id="BonecoFBX" src="https://raw.githubusercontent.com/nucleosistemasit/ar_randon_teste/main/3d/randon.fbx"></a-asset-item>
     </a-assets>
     
     <a-marker type="barcode" value="6">
-      <a-entity obj-model="obj: #BonecoOBJ; mtl: #BonecoMTL" position="0 0 0" rotation="0 0 0" scale="5 5 5"></a-entity>
+      <a-entity fbx-model="src: url(https://raw.githubusercontent.com/nucleosistemasit/ar_randon_teste/main/3d/randon.fbx);" position="0 0 0" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
     </a-marker> 
 
     <a-entity camera></a-entity>
