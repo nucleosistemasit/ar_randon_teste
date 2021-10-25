@@ -8,10 +8,21 @@
     
     <a-assets> 
       <a-asset-item id="boneco" src="https://raw.githubusercontent.com/nucleosistemasit/ar_randon_teste/main/3d/WorkFemale.gltf"></a-asset-item>
+      <audio id="frase_1" src="frase_1.mp3" preload="auto"></audio>
+      <audio id="frase_2" src="frase_2.mp3" preload="auto"></audio>
+      <audio id="frase_3" src="frase_3.mp3" preload="auto"></audio>
     </a-assets>
     
+    <a-marker type="barcode" value="3">
+      <a-entity gltf-model="#boneco" position="0 -2 0" rotation="-90 0 0" scale="1 1 1" sound="src: #frase_1" animation-mixer></a-entity>
+    </a-marker>
+
     <a-marker type="barcode" value="6">
-      <a-entity gltf-model="#boneco" position="0 -2 0" rotation="-90 0 0" scale="1 1 1" animation-mixer></a-entity>
+      <a-entity gltf-model="#boneco" position="0 -2 0" rotation="-90 0 0" scale="1 1 1" sound="src: #frase_2" animation-mixer></a-entity>
+    </a-marker>
+
+    <a-marker type="barcode" value="9">
+      <a-entity gltf-model="#boneco" position="0 -2 0" rotation="-90 0 0" scale="1 1 1" sound="src: #frase_3" animation-mixer></a-entity>
     </a-marker>
 
     <a-entity camera></a-entity>
