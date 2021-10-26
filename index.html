@@ -43,6 +43,10 @@
   var entity2 = document.querySelector('#boneco_2');
   var entity3 = document.querySelector('#boneco_3');
 
+  document.querySelector('#boneco').addEventListener('touchend', function (evt) {
+    entity1.components.sound.playSound();
+  });
+
   AFRAME.registerComponent('play1', {
     init: function () {
       entity1.components.sound.playSound();
