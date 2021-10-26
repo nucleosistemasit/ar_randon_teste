@@ -2,6 +2,57 @@
 <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
+<head>
+  <script>
+
+    var entity1 = document.querySelector('#boneco_1');
+    var entity2 = document.querySelector('#boneco_2');
+    var entity3 = document.querySelector('#boneco_3');
+
+    document.querySelector('#boneco_1').addEventListener('touchend', function (evt) {
+      entity1.components.sound.playSound();
+    });
+
+    AFRAME.registerComponent('play1', {
+      init: function () {
+        entity1.components.sound.playSound();
+      }
+    });
+    
+    AFRAME.registerComponent('stop1', {
+      init: function () {
+        entity1.components.sound.stopSound();
+      }
+    });
+
+    AFRAME.registerComponent('play2', {
+      init: function () {
+        entity2.components.sound.playSound();
+      }
+    });
+
+    AFRAME.registerComponent('stop2', {
+      init: function () {
+        entity2.components.sound.stopSound();
+      }
+    });
+
+    AFRAME.registerComponent('play3', {
+      init: function () {
+        entity3.components.sound.playSound();
+      }
+    });
+
+    AFRAME.registerComponent('stop3', {
+      init: function () {
+        entity3.components.sound.stopSound();
+      }
+    });
+
+  </script>
+
+</head>
+
 <body style="margin : 0px; overflow: hidden;">
   
   <a-scene renderer="logarithmicDepthBuffer: true; colorManagement: true; sortObjects: true;" embedded arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
